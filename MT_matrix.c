@@ -144,7 +144,9 @@ int main(int argc, char *argv[]) {      //input format: ./MY_proc.c thread_numbe
     }
     clock_gettime(CLOCK_MONOTONIC, &t2);
     interval = 1000000* (t2.tv_sec - t1.tv_sec) + (t2.tv_nsec - t1.tv_nsec)/1000;
-    printf("Time: %ldms\n",interval/1000);
+
+    printf("Time: %lds\n",interval/1000000);
+    // printf("Time: %ldms\n",interval/1000); //for testcase 3 and 4
 
     // printf("test\n");
     /* write m3 to result.txt */
